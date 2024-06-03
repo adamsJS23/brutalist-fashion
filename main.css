@@ -1,22 +1,95 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
 }
 
-html{
+html {
   font-size: 62.5%;
   box-sizing: inherit;
 }
 
-body{
-  font-family: 'Playfair Display',serif;
+body {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  padding: 20rem 0;
 }
 
-img{
+img {
   max-width: 100%;
 }
 
-a{
+a {
   text-decoration: none;
+}
+section {
+  width: 90%;
+  max-width: 730px;
+  margin-inline: auto;
+  position: relative;
+  z-index: 1;
+}
+
+section::before {
+  content: "Wow";
+  font-family: "Playfair Display", serif;
+  font-size: 20rem;
+  font-weight: 900;
+  position: absolute;
+  width: 720px;
+  top: -10rem;
+  left: -25rem;
+  z-index: -1;
+  /* transform: translateX(-40%); */
+}
+
+.fashion {
+  display: grid;
+  grid-template-columns: 15rem 15rem 1fr;
+  grid-template-rows: 8rem 1fr 8rem;
+  grid-gap: 2rem;
+  background-color: #fff;
+  padding: 3rem;
+}
+
+.fashion__img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+}
+
+.fashion__img--1 {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+}
+
+.secondary-heading {
+  grid-column: 2/-1;
+  font-size: 7rem;
+  font-weight: 300;
+  align-self: center;
+}
+
+.fashion__img--2 {
+  grid-column: 2;
+  grid-row: 2/-1;
+}
+
+.fashion__img--3 {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.fashion__text {
+  font-size: 1.8rem;
+  font-weight: 100;
+}
+
+.fashion__link {
+  align-self: end;
+  grid-column: 3;
+  grid-row: 3;
+  display: flex;
+  gap: 1rem;
 }
